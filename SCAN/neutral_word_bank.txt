@@ -1,0 +1,11 @@
+person 
+people 
+human 
+adult 
+baby 
+child 
+kid 
+children 
+guy 
+teenage 
+crowd
