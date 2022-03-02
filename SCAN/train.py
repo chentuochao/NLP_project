@@ -18,7 +18,7 @@ import numpy
 import data
 from vocab import Vocabulary, deserialize_vocab
 
-from evaluation import i2t, t2i, AverageMeter, LogCollector, encode_data, shard_xattn_t2i, shard_xattn_i2t
+
 from torch.autograd import Variable
 
 import logging
@@ -31,8 +31,10 @@ fair_sampling = True
 
 if fair_sampling:
     from fairsample import SCAN
+    from evaluation_fair import i2t, t2i, AverageMeter, LogCollector, encode_data, shard_xattn_t2i, shard_xattn_i2t
 else:
     from model import SCAN
+    from evaluation import i2t, t2i, AverageMeter, LogCollector, encode_data, shard_xattn_t2i, shard_xattn_i2t
 
 
 
