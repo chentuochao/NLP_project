@@ -1,0 +1,18 @@
+0. download and unzip the data (need at least 80GB free space)
+wget https://iudata.blob.core.windows.net/scan/data.zip
+
+1.Run orginal SCAN:
+
+python train.py --data_path ./data --data_name DATASET --vocab_path ./vocab --logger_name FOLDER_TO_SAVE --model_name FOLDER_TO_SAVE --bi_gru --cross_attn=t2i
+
+FOLDER_TO_SAVE: the folder name to save the model and log
+DATASET: the dataset to use, coco_precomp or f30k_precomp
+
+Training process:
+"For Flickr30K models, we train with a learning rate of 0.0002 for 15 epochs and then lower it to 0.00002
+for another 15 epochs. For MS-COCO [30] models, we train with a learning
+rate of 0.0005 for 10 epochs and then lower the learning rate to 0.00005 for
+another 10 epochs." (this part need using --resume)
+
+2.Run fair-sampling SCAN:
+open train.py line 30, change fair_sampling to True, then run the same things in linux shell like previous one.
