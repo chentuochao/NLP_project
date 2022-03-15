@@ -13,7 +13,7 @@ wget https://iudata.blob.core.windows.net/scan/data.zip
 wget https://iudata.blob.core.windows.net/scan/vocab.zip
 ```
 
-# Training command:
+# Pre-processing command:
 
 Already contained in the train.py
 
