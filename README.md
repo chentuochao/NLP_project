@@ -19,16 +19,20 @@ Already contained in the train.py
 
 # Training command:
 
-Example script for training:
+Example script for FairSample model training:
 ```bash
 python train.py --data_path ./data --data_name f30k_precomp --vocab_path ./vocab --logger_name ./fair_sample_flickr/ --model_name ./fair_sample_flickr/ --bi_gru --cross_attn=t2i --learning_rate=0.0002 --num_epochs=15
 ```
+
 # Testing command:
 
-Example script for testing:
+Example script for FairSample testing:
 ```bash
 python train.py --data_path ./data --data_name f30k_precomp --vocab_path ./vocab --logger_name ./fair_sample_log2/ --model_name ./fair_sample_log2/ --bi_gru --cross_attn=t2i --resume flickr_model/model_best_nofair.pth.tar --test_data --neutralize
 ```
+Example script for CLIP-clip testing:
+
+The specific can be found in the ./CLIP-clip/README.md
 
 # Pretrained model
 
@@ -36,6 +40,8 @@ https://drive.google.com/drive/folders/1xUsB8uMlOpSQvmZs-ljTayqiBKnX9L9X?usp=sha
 
 # Table of result
 
+Pre-processing reproduced result
 ![avatar](image/pre.png)
 
+Post-processing reproduced result
 ![avatar](image/post.png)
